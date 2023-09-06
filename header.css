@@ -1,0 +1,163 @@
+
+.header {
+    background-color: gray;
+    border-bottom: 2px solid white;
+}
+
+.navBar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo {
+    color: white;
+    transition: 0.25s;
+    width: 55px;
+    padding: 5px;
+    height: auto;
+}
+
+.logo:hover {
+    color: #0088d2;
+}
+
+.navMenu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.navItem {
+    list-style: none;
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.navLink:hover {
+    color: #cc0404;
+}
+
+.hamburguer {
+    height: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navMenu {
+        position: fixed;
+        right: -100%;
+        top: 72px;
+        gap: 0px;
+        border-radius: 0px 0px 8px 8px;
+        background-color: gray;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+        border-bottom: 2px solid black
+    }
+
+    .navItem {
+        margin: 16px 0px;
+    }
+
+    .navMenu.active {
+        right: 0px;
+    }
+}
+
+
+
+.footer {
+    width: 100%;
+    background-color: rgb(138, 138, 138);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3px 10px;
+    color: aliceblue;
+}
+
+.logoAddressContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.AddressContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.verticalBar {
+    width: 1px;
+    height: 70px;
+    background-color: aliceblue;
+}
+
+.navFooter {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footerLogoRock {
+    width: 40px;
+    height: auto;
+}
+
+.footerLogoOne {
+    width: 200px;
+}
+
+.navFooterButton {
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+    border-style: solid;
+    border-color: transparent;
+    color: white;
+}
